@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Menu</title>
+    <style>
+    /* Using <body> element to visual see background image for the body and with font for text content. */ 
+    body{
+            margin: 0;
+            padding: 0;
+            background-image: url(image/menubackground.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: sans-serif;
+               
+        }
+
+/* Class "nav" with width to 100% of its container element and sets the background color to "dodgerblue".  */
+nav{
+    width: 100%;
+    background-color: dodgerblue;
+}
+/* A list (ul) element create a centered and 80% width unordered lise with no pudding   */
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+/* A unorderered list element for the horizontal menu where each item is space apart with padding.  */
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+/* This code to add a hover effect to list items with background blue. */
+ul li:hover{
+    background: blue;
+}
+/* This code sets the color of all anchor tags withing the list item to white and default the text-decoratopm to none.  */
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+/*  A class (toggle) element with a blue background and white font, with a right-aligned text and padding of 10px top/bottom, and 20px left/right.  */
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    box-sizing: border-box;
+    color: white;
+    background-color: blue;
+    font-size: 30px;
+    display: none;
+}
+
+/*  A class element to set the text align to center and margin of 55% adding visual space to the top of the section.  */
+        .text{
+           text-align: center;
+           margin-top: 5%;  
+        }
+/*  Setting the header tag (h1) to 50px for webpage. */
+        h1{
+            font-size: 50px;
+        }
+        /*  Setting the header tag (h3) to 50px for webpage. */
+
+        h3{
+            font-size: 25px;
+        }
+        /*  the class element has large, button with lightblue, added padding and margin. The buttons is an inline-block which mean
+        other element will position next to it.   */
+
+        .btn {
+            border: 100%;
+            background-color: inherit;
+            padding: 14px 28px;
+            font-size: 70px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 30px 30px;
+            text-decoration: none;
+            background-color: lightblue;
+}
+
+        /* A class element hover that make the buttons more interactive and appealing on 
+        hover.  */
+
+        .btn:hover {
+            background: #eee;
+            transition: .4s;
+            cursor: pointer;
+            transform: scale(1.2);
+            background-color: transparent;
+            text-decoration: none;
+        }
+        /* A class element anchor that removing the default of text-decoration.  */
+        .btn a{
+           text-decoration: none;
+        }
+
+        .number1 {color: green;}
+        .number2 {color: dodgerblue;}
+        .number3 {color: orange;}
+    
+        .number4 {color: green;}
+        .number5 {color: dodgerblue;}
+        .number6 {color: orange;}
+
+                /* A class element that text align to center and set the color to white for all element withiin class "buttonRow".  */
+
+        .buttonRow {
+            text-align: center;
+            color: white;
+
+        }
+        /* A class element that set 5% of space above the elements and default text-decoration for all element within class ".topRow".  */
+
+        .topRow {
+            margin-top: 5%;
+            text-decoration: none;
+        }
+/* The media query targeting screens with the maximum width of 768px. */
+        @media (max-width:768px) {
+    .toggle{
+        display: block;
+    }
+
+ul{
+    width: 100%;
+    display: none;
+}
+ul li{
+    display: block;
+    text-align: center;
+}
+.active{
+    display: block;
+}
+}
+/* A media query applying style to the class element when maximum width of 390px or less.     */
+        @media screen and (min-width: 390px) {
+        
+            nav {
+                flex-direction: row;
+                justify-content: end;
+                transform: translateX(0);
+                height: auto;
+
+            }
+            nav a{
+                margin: 0 20px;
+                font-size: 1.5em;
+                border: none;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+     <!-- using a snippet code to create a basic navigation bar with three links. -->
+    <nav >
+        <div  class="toggle"><i class="fa fa-bars menu" style="font-size:24px" ></i></div>
+        <ul>
+            <li><a href="startup.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+     <!-- This script code is useful for creating a reponsive navigation menu that can be hidden or shown base on the devices. -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+            })
+    
+        })
+      </script>
+
+ <!-- a class that contain a heading and subheading -->
+<div class="text">
+    <h1>MENU</h1>
+    <h3>Select One</h3>
+</div>
+ <!-- This is a snippet code set of six buttons arranged in two rows. -->
+<div class="buttonRow topRow">
+<a href ="page1.html"><button class="btn number1">1</button></a>
+<a href="page2.html"><button class="btn number2">2</button></a>
+<a href="page3.html"><button class="btn number3">3</button></a>
+</div>
+<div class="buttonRow">
+<a href="page4.html"><button class="btn number4">4</button></a>
+<a href="page5.html"><button class="btn number5">5</button></a>
+<a href="page6.html"><button class="btn number6">6</button></a>
+</div>
+
+</body>
+</html>

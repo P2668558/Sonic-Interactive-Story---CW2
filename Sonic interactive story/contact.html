@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact</title>
+    <style>
+            /* Using <body> element to visual see background image for the body and with font for text content. */ 
+
+        body{
+            margin: 0;
+            background-image: url(image/contactbackground.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            font-family: sans-serif;
+               
+        }
+            /* The code is a consistent style for form. */ 
+        input[type=text], select, textarea {
+           width: 100%;
+           padding: 12px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+           margin-top: 6px;
+           margin-bottom: 16px;
+           resize: vertical;
+}
+            /* The code applies styles to the submit button. */ 
+        input[type=submit] {
+           background-color: #04AA6D;
+           color: white;
+           padding: 12px 20px;
+           border: none;
+           border-radius: 4px;
+           cursor: pointer;
+}
+         /* The code style the submit button when it is hovered over. */ 
+        input[type=submit]:hover {
+           background-color: #45a049;
+}
+         /* The class element cide creates a rounded corner and some space around its content. */ 
+        .container {
+           border-radius: 5px;
+           padding: 20px;
+}
+/* Class "nav" with width to 100% of its container element and sets the background color to "dodgerblue".  */
+nav{
+    width: 100%;
+    background-color: dodgerblue;
+}
+/* A list (ul) element create a centered and 80% width unordered lise with no pudding   */
+ul{
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+}
+/* A unorderered list element for the horizontal menu where each item is space apart with padding.  */
+ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+/* This code to add a hover effect to list items with background blue. */
+ul li:hover{
+    background: blue;
+}
+/* This code sets the color of all anchor tags withing the list item to white and default the text-decoration to none.  */
+ul li a{
+    color: white;
+    text-decoration: none;
+}
+/*  A class (toggle) element with a blue background and white font, with a right-aligned text and padding of 10px top/bottom, and 20px left/right.  */
+.toggle{
+    width: 100%;
+    padding: 10px 20px;
+    text-align: right;
+    box-sizing: border-box;
+    color: white;
+    background-color: blue;
+    font-size: 30px;
+    display: none;
+}
+/* The media query targeting screens with the maximum width of 768px. */
+@media (max-width:768px) {
+    .toggle{
+        display: block;
+    }
+
+ul{
+    width: 100%;
+    display: none;
+}
+ul li{
+    display: block;
+    text-align: center;
+}
+.active{
+    display: block;
+}
+}
+
+                
+    </style>
+</head>
+<body>
+     <!-- using a snippet code to create a basic navigation bar with three links. -->
+<nav>
+    <div class="toggle"><i class="fa fa-bars menu" style="font-size:24px"></i></div>
+    <ul>
+        <li><a href="startup.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+     <!-- This script code is useful for creating a reponsive navigation menu that can be hidden or shown base on the devices. -->
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.menu').click(function(){
+            $('ul').toggleClass('active');
+        })
+
+    })
+  </script>
+
+     <!-- A code that creates a form for users to input their name, country, and a subject message. -->
+<div class="container">
+    <form action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+  
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" placeholder="Your country is..">
+  
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+        
+</body>
+</html>
